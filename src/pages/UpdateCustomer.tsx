@@ -29,6 +29,9 @@ export default function UpdateCustomer() {
             <input className="inputCSS" type="text" placeholder="Phone Number"
                    onChange={(e) => setPhone(e.target.value)}/>
             <br/><br/>
+            {customers.map((customer: Customer) => (
+                <div
+                    key={customer.email}>{customer.name + ' | ' + customer.email + ' | ' + customer.phone}</div>))}<br/>
             <button className="buttonCSS" onClick={updateCustomer}>Update Customer</button>
         </>
     )
