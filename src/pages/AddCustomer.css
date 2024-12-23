@@ -1,9 +1,0 @@
-.left-card {
-    @apply flex flex-col p-6 items-center rounded-lg shadow-xl bg-white border border-t-2;
-}
-.right-card {
-    @apply flex flex-col p-6 items-center rounded-lg shadow-xl bg-white border-t-2;
-}
-thead, tbody {
-    @apply border border-sky-950 text-center bg-sky-200 text-sky-950 font-semibold;
-}
