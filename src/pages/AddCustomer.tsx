@@ -1,7 +1,6 @@
 import {useContext, useState} from "react";
 import {CustomerContext} from "../component/CustomerProvider.tsx";
 import {Customer} from "../component/Customer.ts";
-import "./AddCustomer.css"
 
 export default function AddCustomer() {
     const [customers, setCustomers] = useContext(CustomerContext);
@@ -18,7 +17,7 @@ export default function AddCustomer() {
         <div className="grid grid-cols-2 main-section p-6">
             {/*customer section*/}
             <div className="left-card m-3">
-                <h2 className="mb-6 p-2 w-fit text-2xl">Manage Customers</h2>
+                <h2 className="mb-6 p-2 w-fit text-2xl">Save Customers</h2>
 
                 <input className="mb-6 p-2" type="text" placeholder="Name"
                        onChange={(e) => setName(e.target.value)}/>
@@ -50,15 +49,15 @@ export default function AddCustomer() {
 
             {/*item section*/}
             <div className="right-card m-3">
-                <h2 className="mb-6 p-2 w-fit text-2xl">Manage Items</h2>
+                <h2 className="mb-6 p-2 w-fit text-2xl">Save Items</h2>
 
                 <input className="mb-6 p-2" type="text" placeholder="Item Name"
-                       onChange={(e) => setName(e.target.value)}/>
+                       />
                 <input className="mb-6 p-2" type="text" placeholder="Item"
-                       onChange={(e) => setEmail(e.target.value)}/>
+                       />
                 <input className="mb-6 p-2" type="text" placeholder="Item"
-                       onChange={(e) => setPhone(e.target.value)}/>
-                <button className="buttonCSS" onClick={addCustomer}>Add Item</button>
+                       />
+                <button className="buttonCSS">Add Item</button>
 
                 <table className="table-auto border border-gray-300 w-full mt-6">
                     <thead>
@@ -69,13 +68,16 @@ export default function AddCustomer() {
                     </tr>
                     </thead>
                     <tbody>
-                    {customers.map((customer: Customer) => (
+                    {/*{customers.map((customer: Customer) => (
                         <tr key={customer.email}>
                             <td>{customer.name}</td>
                             <td>{customer.email}</td>
                             <td>{customer.phone}</td>
                         </tr>
-                    ))}
+                    ))}*/}
+                    <tr>
+
+                    </tr>
                     </tbody>
                 </table>
             </div>
