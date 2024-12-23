@@ -1,7 +1,8 @@
 import {useContext, useState} from "react";
 import {CustomerContext} from "../component/CustomerProvider.tsx";
-import {Customer} from "../component/Customer.tsx";
+import {Customer} from "../component/Customer.ts";
 import {useNavigate} from "react-router";
+import "./AddCustomer.css"
 
 export default function AddCustomer() {
     const navigate = useNavigate();
@@ -17,17 +18,31 @@ export default function AddCustomer() {
     }
 
     return (
-        <>
-            <h2>Add Customer</h2>
+        <div className="grid grid-cols-2 main-section p-6">
+                {/*customer section*/}
+                <div className="left-card m-3">
+                    <h2>Add Customer</h2>
 
-            <input className="inputCSS" type="text" placeholder="Name"
-                               onChange={(e) => setName(e.target.value)}/><br/><br/>
-            <input className="inputCSS" type="text" placeholder="Email"
-                               onChange={(e) => setEmail(e.target.value)}/><br/><br/>
-            <input className="inputCSS" type="text" placeholder="Phone Number"
-                               onChange={(e) => setPhone(e.target.value)}/>
-            <br/><br/>
-            <button className="buttonCSS" onClick={addCustomer}>Add Customer</button>
-        </>
+                    <input className="inputCSS" type="text" placeholder="Name"
+                           onChange={(e) => setName(e.target.value)}/>
+                    <input className="inputCSS" type="text" placeholder="Email"
+                           onChange={(e) => setEmail(e.target.value)}/>
+                    <input className="inputCSS" type="text" placeholder="Phone Number"
+                           onChange={(e) => setPhone(e.target.value)}/>
+                    <button className="buttonCSS" onClick={addCustomer}>Add Customer</button>
+                </div>
+            {/*item section*/}
+            <div className="right-card m-3">
+                <h2>Add Item</h2>
+
+                <input className="inputCSS" type="text" placeholder="Item Name"
+                       onChange={(e) => setName(e.target.value)}/>
+                <input className="inputCSS" type="text" placeholder="Item"
+                       onChange={(e) => setEmail(e.target.value)}/>
+                <input className="inputCSS" type="text" placeholder="Item"
+                       onChange={(e) => setPhone(e.target.value)}/>
+                <button className="buttonCSS" onClick={addCustomer}>Add Item</button>
+            </div>
+        </div>
     )
 }
