@@ -1,5 +1,5 @@
 import {useContext, useState} from "react";
-import {CustomerContext} from "./CustomerProvider.tsx";
+import {CustomerContext} from "../store/CustomerProvider.tsx";
 
 export const [customers, setCustomers] = useContext(CustomerContext);
 /*
