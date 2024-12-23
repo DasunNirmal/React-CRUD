@@ -1,11 +1,11 @@
 import './App.css'
 import {createBrowserRouter, RouterProvider} from "react-router";
 import Dashboard from "./pages/Dashboard.tsx";
-import AddCustomer from "./pages/AddCustomer.tsx";
-import UpdateCustomer from "./pages/UpdateCustomer.tsx";
-import DeleteCustomer from "./pages/DeleteCustomer.tsx";
+import Save from "./pages/Save.tsx";
+import Update from "./pages/Update.tsx";
+import Delete from "./pages/Delete.tsx";
 import {RootLayout} from "./component/RootLayout.tsx";
-import {CustomerProvider} from "./component/CustomerProvider.tsx";
+import {CustomerProvider} from "./store/CustomerProvider.tsx";
 
 function App() {
     /*Route is a destination*/
@@ -15,9 +15,9 @@ function App() {
             element : <RootLayout/>,
             children:[
                 {path : '',element : <Dashboard/>},
-                {path : '/add',element:<AddCustomer/>},
-                {path : '/update',element:<UpdateCustomer/>},
-                {path : '/delete',element:<DeleteCustomer/>}
+                {path : '/add',element:<Save/>},
+                {path : '/update',element:<Update/>},
+                {path : '/delete',element:<Delete/>}
             ]},
     ])
 
