@@ -25,7 +25,7 @@ export default function Save() {
                        onChange={(e) => setEmail(e.target.value)}/>
                 <input className="mb-6 p-2" type="text" placeholder="Phone Number"
                        onChange={(e) => setPhone(e.target.value)}/>
-                <button className="buttonCSS" onClick={addCustomer}>Add Customer</button>
+                <button onClick={addCustomer}>Add Customer</button>
 
                 <table className="table-auto border border-gray-300 w-full mt-6">
                     <thead>
@@ -51,28 +51,28 @@ export default function Save() {
             <div className="right-card m-3">
                 <h2 className="mb-6 p-2 w-fit text-2xl">Save Items</h2>
 
+                <input className="mb-6 p-2" type="text" placeholder="Item COde"
+                       />
                 <input className="mb-6 p-2" type="text" placeholder="Item Name"
                        />
-                <input className="mb-6 p-2" type="text" placeholder="Item"
+                <input className="mb-6 p-2" type="text" placeholder="Item Quantity"
                        />
-                <input className="mb-6 p-2" type="text" placeholder="Item"
-                       />
-                <button className="buttonCSS">Add Item</button>
+                <button>Add Item</button>
 
                 <table className="table-auto border border-gray-300 w-full mt-6">
                     <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Email</td>
-                        <td>phone</td>
+                        <td>Item Code</td>
+                        <td>Item Name</td>
+                        <td>Quantity</td>
                     </tr>
                     </thead>
                     <tbody>
-                    {/*{customers.map((customer: Customer) => (
-                        <tr key={customer.email}>
-                            <td>{customer.name}</td>
-                            <td>{customer.email}</td>
-                            <td>{customer.phone}</td>
+                    {/*{items.map((items: Item) => (
+                        <tr key={items.code}>
+                            <td>{items.code}</td>
+                            <td>{items.itemName}</td>
+                            <td>{items.qty}</td>
                         </tr>
                     ))}*/}
                     <tr>
