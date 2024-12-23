@@ -1,0 +1,6 @@
+.left-card {
+    @apply border border-red-400;
+}
+.right-card {
+    @apply border border-red-400;
+}
