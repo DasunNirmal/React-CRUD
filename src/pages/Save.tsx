@@ -1,8 +1,8 @@
 import {useContext, useState} from "react";
-import {CustomerContext} from "../component/CustomerProvider.tsx";
+import {CustomerContext} from "../store/CustomerProvider.tsx";
 import {Customer} from "../component/Customer.ts";
 
-export default function AddCustomer() {
+export default function Save() {
     const [customers, setCustomers] = useContext(CustomerContext);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
