@@ -1,8 +1,8 @@
 import {useContext, useState} from "react";
-import {CustomerContext} from "../component/CustomerProvider.tsx";
+import {CustomerContext} from "../store/CustomerProvider.tsx";
 import {Customer} from "../component/Customer.ts";
 
-export default function DeleteCustomer() {
+export default function Delete() {
 
     const [customers, setCustomers] = useContext(CustomerContext);
     const [email, setEmail] = useState("");
