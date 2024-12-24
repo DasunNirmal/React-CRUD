@@ -71,7 +71,7 @@ export default function Delete() {
                 onChange={(e) => setCode(e.target.value)} />
                 <div className="flex w-3/4 justify-center gap-10">
                     <button className="w-2/4" onClick={deleteItem}>Delete Last Item</button>
-                    <button className="w-2/4" onChange={deleteItemByCode}>Delete By Item Code</button>
+                    <button className="w-2/4" onClick={deleteItemByCode}>Delete By Item Code</button>
                 </div>
 
                 <table className="table-auto border border-gray-300 w-full mt-6">
