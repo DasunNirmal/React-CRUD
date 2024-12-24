@@ -87,9 +87,6 @@ export default function Save() {
                             <td>{items.qty}</td>
                         </tr>
                     ))}
-                    <tr>
-
-                    </tr>
                     </tbody>
                 </table>
             </div>
